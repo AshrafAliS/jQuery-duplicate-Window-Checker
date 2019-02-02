@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>jQuery duplicate Window Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="duplicate.js"></script>
+</head>
+<body>
+    <section class="section">
+    <div class="container has-text-centered">
+        <h1 class="title is-1">jQuery duplicate Window Example</h1>
+        <p>This is test page,<br/><a href="index.html" class="button is-danger" target="_blank">Click here</a> <br/>to open another window</p>
+    </div>
+  </section>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (window.IsDuplicate()) {
+                alert("Window Already Opened in Another Tab\nPlease Click Ok");
+                window.close();
+            }
+        });
+    </script>
+</body>
+</html>
